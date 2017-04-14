@@ -1,4 +1,4 @@
 test:
   post:
     - ./gradlew buildBom
-    - bash <(curl -s https://test.duckbuild.io/bash/circle) ./build/blackduck/*_bdio.jsonld
+    - bash <(curl -s https://copilot.blackducksoftware.com/bash/circle) ./build/blackduck/*_bdio.jsonld

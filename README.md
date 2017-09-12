@@ -36,3 +36,5 @@ test:
     - ./gradlew buildBom
     - bash <(curl -s https://copilot.blackducksoftware.com/bash/circle) ./build/blackduck/*_bdio.jsonld
 ```
+
+

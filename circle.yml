@@ -1,5 +1,3 @@
 test:
   post:
-    - curl https://test.duckbuild.io/scripts/init/gradle -o bds_init.gradle
-    - ./gradlew --init-script bds_init.gradle buildBom -DbdsPluginVersion=5.0.0
-    - bash <(curl -s https://test.duckbuild.io/bash/circle) ./build/blackduck/*_bdio.jsonld
+    - bash <(curl -s https://test.duckbuild.io/ci/circle/scripts/upload)

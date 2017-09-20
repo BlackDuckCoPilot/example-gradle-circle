@@ -1,6 +1,6 @@
 # Black Duck CoPilot Gradle/Circle CI Example
 
-[![CircleCI](https://img.shields.io/circleci/project/github/BlackDuckCoPilot/example-gradle-circle/master.svg)](https://circleci.com/gh/BlackDuckCoPilot/example-gradle-circle) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/groups/BlackDuckCoPilot/locations/example-gradle-circle/public/results/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/groups/BlackDuckCoPilot/locations/example-gradle-circle/public/results/branches/master)
+[![CircleCI](https://img.shields.io/circleci/project/github/BlackDuckCoPilot/example-gradle-circle/master.svg)](https://circleci.com/gh/BlackDuckCoPilot/example-gradle-circle) [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-circle/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/BlackDuckCoPilot/example-gradle-circle/branches/master)
 
 Shows a working setup for using the Black Duck CoPilot integration to analyze the risk of project dependencies
 
@@ -11,7 +11,5 @@ The `circle.yml` file has been modified to upload generated dependency data to B
 ```yaml
 test:
   post:
-    - curl https://copilot.blackducksoftware.com/scripts/init/gradle -o bds_init.gradle
-    - ./gradlew --init-script bds_init.gradle buildBom -DbdsPluginVersion=5.0.0
-    - bash <(curl -s https://copilot.blackducksoftware.com/bash/circle) ./build/blackduck/*_bdio.jsonld
+    - bash <(curl -s https://copilot.blackducksoftware.com/ci/circle/scripts/upload)
 ```

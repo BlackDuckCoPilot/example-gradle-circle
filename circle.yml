@@ -1,4 +1,4 @@
 test:
   post:
     - printenv
-    - bash <(curl -s https://test.duckbuild.io/ci/circle/scripts/upload)
+    - bash <(curl -s https://copilot.blackducksoftware.com/ci/circle/scripts/upload)

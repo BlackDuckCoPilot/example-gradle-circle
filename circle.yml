@@ -1,3 +1,0 @@
-test:
-  post:
-    - bash <(curl -s https://copilot-valid.blackducksoftware.com/ci/circle/scripts/upload)

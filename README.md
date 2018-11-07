@@ -6,10 +6,9 @@ Shows a working setup for using the Black Duck CoPilot integration to analyze th
 
 ## Circle CI Setup
 
-The `circle.yml` file has been modified to upload generated dependency data to Black Duck CoPilot:
+The `.circleci/config.yml` file has been modified to upload generated dependency data to Black Duck CoPilot:
 
 ```yaml
-test:
-  post:
-    - bash <(curl -s https://copilot.blackducksoftware.com/ci/circle/scripts/upload)
+    - deploy:
+          command: bash <(curl -s https://copilot-test.blackducksoftware.com/ci/circle2/scripts/upload)
 ```

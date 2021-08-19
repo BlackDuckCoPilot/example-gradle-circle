@@ -9,6 +9,6 @@ Shows a working setup for using the Black Duck CoPilot integration to analyze th
 The `.circleci/config.yml` file has been modified to upload generated dependency data to Black Duck CoPilot:
 
 ```yaml
-    - deploy:
-          command: bash <(curl -s https://copilot-test.blackducksoftware.com/ci/circle2/scripts/upload)
+steps:
+    - run: bash <(curl -s https://copilot-valid.blackducksoftware.com/ci/circle2/scripts/upload)
 ```

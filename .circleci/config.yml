@@ -42,4 +42,4 @@ jobs:
       - run: ./gradlew test
       
       # upload results to CoPilot for security analysis
-      - run: bash <(curl -s https://copilot-valid.blackducksoftware.com/ci/circle2/scripts/upload)
+      - run: bash <(curl -s https://copilot-test.blackducksoftware.com/ci/circle2/scripts/upload)

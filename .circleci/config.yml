@@ -31,7 +31,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: gradle dependencies
+      - run: ./gradlew dependencies
 
       - save_cache:
           paths:
@@ -39,7 +39,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
-      - run: gradle test
+      - run: ./gradlew test
       
       # upload results to CoPilot for security analysis
       - run: bash <(curl -s https://copilot-test.blackducksoftware.com/ci/circle2/scripts/upload)
